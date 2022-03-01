@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "./src/app.js"),
+    main: path.resolve(__dirname, "./src/app.ts"),
   },
   module: {
     rules: [
@@ -11,8 +11,17 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
     ],
   },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "deploy"),
