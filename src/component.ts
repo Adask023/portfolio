@@ -1,7 +1,10 @@
 export default (text = "Hello, Webpack!") => {
-  const element = document.createElement("h1");
+  const values: Array<number> = [1, 2];
 
-  element.innerHTML = text;
+  const sum: number = values[0] + values[1];
+
+  const element = document.createElement("h1");
+  element.innerHTML = `${text} + ${sum}`;
 
   return element;
 };

@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (text) {\r\n    if (text === void 0) { text = \"Hello, Webpack!\"; }\r\n    var element = document.createElement(\"h1\");\r\n    element.innerHTML = text;\r\n    return element;\r\n});\r\n\n\n//# sourceURL=webpack://webpack-test/./src/component.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (text) {\r\n    if (text === void 0) { text = \"Hello, Webpack!\"; }\r\n    var values = [1, 2];\r\n    var sum = values[0] + values[1];\r\n    var element = document.createElement(\"h1\");\r\n    element.innerHTML = \"\".concat(text, \" + \").concat(sum);\r\n    return element;\r\n});\r\n\n\n//# sourceURL=webpack://webpack-test/./src/component.ts?");
 
 /***/ })
 
