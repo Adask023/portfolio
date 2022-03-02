@@ -19,7 +19,11 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        use: "html-loader",
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
@@ -39,6 +43,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      template: "./src/public/index.html",
+      filename: "index.html",
       title: "Webpack Output",
     }),
   ],

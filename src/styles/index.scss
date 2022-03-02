@@ -1,13 +1,13 @@
 // reset
 @import "base";
 
-
 // variables & utilities
 @import "variables";
 @import "utilities";
 
 // components
-
+@import "components/navbarSection";
+@import "components/heroSection";
 
 // global responsiveness
 @import "globalResponsive";
