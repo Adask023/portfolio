@@ -1,0 +1,27 @@
+.aboutme-section {
+  min-height: 80vh;
+  width: 100%;
+  display: block;
+  background-color: $acc-3;
+  .image-section {
+    height: 200px;
+    width: 200px;
+    background: url("../images/hacker.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    position: relative;
+    &::before {
+      content: "";
+      top: 0%;
+      left: 0%;
+      // transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      position: absolute;
+      background-color: transparent;
+      border: 4px solid $acc-1;
+    }
+  }
+}
