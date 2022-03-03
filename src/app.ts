@@ -5,5 +5,7 @@ import "./styles/index.scss";
 
 // pobieranie komponentu a następnie dołączanie jako child
 document.body.appendChild(navbar());
-document.body.appendChild(component());
+
+// test component
+// document.body.appendChild(component());
 document.body.appendChild(hero());

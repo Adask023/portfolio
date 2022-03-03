@@ -1,7 +1,70 @@
-.hero {
-  .bgc-image {
-    height: 100px;
-    width: 100px;
-    // background-image: url("../../images/nature-background.jpg");
+.hero-section {
+  background-color: $gray;
+  min-height: 100vh;
+
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .hero {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+
+    &-section-bars {
+      .bar {
+        width: 100%;
+        height: 80px;
+        background-color: $lightgray;
+        line-height: 60px;
+
+        .bar-content {
+          max-width: 800px;
+          margin: auto;
+        }
+
+      }
+      .bar:nth-child(even) {
+        background-color: $gray;
+      }
+
+      .bar-gray {
+        opacity: 40%;
+      }
+
+      .bar-acc-blue {
+        color: $acc-1;
+      }
+      .bar-acc-pink {
+        color: $acc-2;
+      }
+      .bar-acc-yellow {
+        color: $acc-3;
+      }
+    }
+  } 
+
+  .hero-button {
+    position: absolute;
+  
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $acc-2;
   }
+}
+
+.hero {
+  // .bgc-image {
+  //   min-height: 100vh;
+  //   width: 100px;
+  //   background-image: url("../images/nature-background.jpg");
+  //   background-position: center; /* Center the image */
+  //   background-repeat: no-repeat; /* Do not repeat the image */
+  //   background-size: cover; /* Resize the background image to cover the entire container */
+  // }
 }
