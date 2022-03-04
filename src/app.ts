@@ -4,10 +4,9 @@ import { hero } from "./components/hero/hero";
 import "./styles/index.scss";
 import { aboutme } from "./components/aboutme/aboutme";
 import { CreateWebsite } from "./util/CreateWebsite";
+import { gallery } from "./components/gallery/gallery";
 
-
-
-const myweb = new CreateWebsite([hero(), aboutme()], navbar());
+const myweb = new CreateWebsite([hero(), aboutme(), gallery()], navbar());
 myweb.run();
 
 // pobieranie komponentu a następnie dołączanie jako child

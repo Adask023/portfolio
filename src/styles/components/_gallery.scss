@@ -1,0 +1,63 @@
+.gallery-section {
+  .projects-wrapper {
+    display: grid;
+    grid-auto-rows: 350px;
+    grid-gap: 15px;
+    grid-template-areas:
+      "item1 item1 item2"
+      "item1 item1 item3 ";
+    .item-1 {
+      overflow: hidden;
+      &-img {
+        width: 100%;
+        height: 100%;
+        @include bg-image;
+        background-image: url("../images/gravitygym.jpg");
+        a {
+          @include block-link;
+        }
+      }
+
+      grid-area: item1;
+    }
+    .item-2 {
+      overflow: hidden;
+      &-img {
+        width: 100%;
+        height: 100%;
+        @include bg-image;
+        background-image: url("../images/floorpricetracker.jpg");
+        a {
+          @include block-link;
+        }
+      }
+    }
+    .item-3 {
+      overflow: hidden;
+      &-img {
+        width: 100%;
+        height: 100%;
+        @include bg-image;
+        background-image: url("../images/aboutmepage.jpg");
+        a {
+          @include block-link;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      grid-area: item3;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gallery-section {
+    .projects-wrapper {
+      grid-template-areas:
+        "item1"
+        "item2"
+        "item3";
+    }
+  }
+}

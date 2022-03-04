@@ -1,33 +1,5 @@
 $borderImage: 2px;
 
-@mixin imageShadow {
-  content: "";
-  top: 20px;
-  left: 20px;
-  // transform: translate(-50%,-50%);
-  width: calc(100% - 2 * $borderImage);
-  height: calc(100% - 2 * $borderImage);
-  background-color: black;
-  position: absolute;
-  background-color: transparent;
-  border: $borderImage solid;
-}
-
-@mixin imageShadowBlue {
-  @include imageShadow;
-  border-color: $acc-1;
-}
-
-@mixin imageShadowPink {
-  @include imageShadow;
-  border-color: $acc-2;
-}
-
-@mixin imageShadowYellow {
-  @include imageShadow;
-  border-color: $acc-3;
-}
-
 .aboutme-section {
   min-height: 80vh;
   width: 100%;
@@ -48,13 +20,5 @@ $borderImage: 2px;
     }
   }
   .info-section {
-    &-header{
-      display: inline-block;
-      opacity: 50%;
-      color: white;
-      background-color: $lightgray;
-    }
   }
 }
-
-
