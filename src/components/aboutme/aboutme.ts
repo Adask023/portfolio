@@ -1,6 +1,9 @@
+import { loadTemplate } from "../../util/LoadTemplate";
+
 export const aboutme = () => {
   const htmlString = require("./aboutme-static.html");
-  const element = document.createElement("div");
-  element.innerHTML = htmlString.default;
+  const element = loadTemplate(htmlString);
+
+
   return element;
 };
