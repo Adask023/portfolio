@@ -8,9 +8,10 @@ import { gallery } from "./components/gallery/gallery";
 import { form } from "./components/form/form";
 import { footer } from "./components/footer/footer";
 import { handleNavActive } from "./util/handleNavActive";
+import { skills } from "./components/skills/skills";
 
 const myweb = new CreateWebsite(
-  [hero(), aboutme(), gallery(), form()],
+  [hero(), aboutme(), skills(), gallery(), form()],
   navbar(),
   footer()
 );
