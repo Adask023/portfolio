@@ -1,0 +1,85 @@
+.contact-section {
+  min-height: 30vh;
+  width: 100%;
+  background-color: $lightgray;
+
+  .form-header {
+    color: $acc-1;
+    text-align: center;
+  }
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 30vh;
+    color: white;
+
+    .info {
+      p.profile-links  {
+          text-align: center;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .linkedin-link {
+        @include animated-button;
+        width: 200px;
+
+        border-color: $acc-1;
+        color: $acc-1;
+        &:after {
+          background-color: $acc-1;
+        }
+      }
+      .github-link {
+        @include animated-button;
+        border-color: $acc-3;
+        color: $acc-3;
+        width: 200px;
+        &:after {
+          background-color: $acc-3;
+        }
+      }
+    }
+
+    .form-section {
+      width: 100%;
+      color: black;
+
+      form > div {
+        width: calc(100% - 20px);
+
+        input {
+          width: calc(100% - 10px);
+          display: block;
+          box-sizing: border-box;
+          height: 40px;
+          font-family: "Source Code Pro", monospace;
+          font-size: 14px;
+        }
+
+        textarea {
+          box-sizing: border-box;
+          width: calc(100% - 10px);
+          font-size: 14px;
+          font-family: "Source Code Pro", monospace;
+          resize: none;
+        }
+
+        button {
+          @include animated-button;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contact-section {
+    .form-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+}

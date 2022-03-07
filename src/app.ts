@@ -5,8 +5,12 @@ import "./styles/index.scss";
 import { aboutme } from "./components/aboutme/aboutme";
 import { CreateWebsite } from "./util/CreateWebsite";
 import { gallery } from "./components/gallery/gallery";
+import { form } from "./components/form/form";
 
-const myweb = new CreateWebsite([hero(), aboutme(), gallery()], navbar());
+const myweb = new CreateWebsite(
+  [hero(), aboutme(), gallery(), form()],
+  navbar()
+);
 myweb.run();
 
 // pobieranie komponentu a następnie dołączanie jako child

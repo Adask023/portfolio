@@ -41,9 +41,6 @@
         background-image: url("../images/aboutmepage.jpg");
         a {
           @include block-link;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
       }
       grid-area: item3;
