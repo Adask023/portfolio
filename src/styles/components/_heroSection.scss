@@ -27,7 +27,6 @@
           max-width: 1000px;
           margin: auto;
         }
-
       }
       .bar:nth-child(even) {
         background-color: $gray;
@@ -47,15 +46,22 @@
         color: $acc-3;
       }
     }
-  } 
+  }
 
   .hero-button {
     position: absolute;
-  
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $acc-2;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid $acc-2;
+      color: $acc-2;
+      background-color: transparent;
+    }
   }
 }
 
