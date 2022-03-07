@@ -6,10 +6,12 @@ import { aboutme } from "./components/aboutme/aboutme";
 import { CreateWebsite } from "./util/CreateWebsite";
 import { gallery } from "./components/gallery/gallery";
 import { form } from "./components/form/form";
+import { footer } from "./components/footer/footer";
 
 const myweb = new CreateWebsite(
   [hero(), aboutme(), gallery(), form()],
-  navbar()
+  navbar(),
+  footer()
 );
 myweb.run();
 
