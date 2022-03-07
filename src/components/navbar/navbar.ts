@@ -1,5 +1,6 @@
 import { loadTemplate } from "../../util/LoadTemplate";
 
+
 export const navbar: any = () => {
   const htmlString = require("./navbar-static.html");
 
@@ -12,6 +13,8 @@ export const navbar: any = () => {
     console.log("click");
     mobileMenu.classList.toggle("display-none");
   });
+
+
 
   return element;
 };

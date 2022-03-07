@@ -7,6 +7,7 @@ import { CreateWebsite } from "./util/CreateWebsite";
 import { gallery } from "./components/gallery/gallery";
 import { form } from "./components/form/form";
 import { footer } from "./components/footer/footer";
+import { handleNavActive } from "./util/handleNavActive";
 
 const myweb = new CreateWebsite(
   [hero(), aboutme(), gallery(), form()],
@@ -15,12 +16,5 @@ const myweb = new CreateWebsite(
 );
 myweb.run();
 
-// pobieranie komponentu a następnie dołączanie jako child
-// document.body.appendChild(navbar());
-// console.log(typeof navbar());
-
-// document.body.appendChild(hero());
-// document.body.appendChild(aboutme());
-
-// test component
-// document.body.appendChild(component());
+// global
+handleNavActive();
