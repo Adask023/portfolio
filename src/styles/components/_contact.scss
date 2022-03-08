@@ -14,8 +14,8 @@
     color: white;
 
     .info {
-      p.profile-links  {
-          text-align: center;
+      p.profile-links {
+        text-align: center;
       }
       a {
         display: block;
@@ -29,6 +29,9 @@
 
         border-color: $acc-1;
         color: $acc-1;
+        &:hover > a {
+          color: black !important;
+        }
         &:after {
           background-color: $acc-1;
         }
@@ -38,6 +41,9 @@
         border-color: $acc-3;
         color: $acc-3;
         width: 200px;
+        &:hover > a {
+          color: black !important;
+        }
         &:after {
           background-color: $acc-3;
         }
