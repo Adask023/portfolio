@@ -10,6 +10,8 @@ import { footer } from "./components/footer/footer";
 import { handleNavActive } from "./util/handleNavActive";
 import { skills } from "./components/skills/skills";
 import { Animations } from "./util/animations/imageAnimations";
+import { CreateLoadingCircle } from "./util/CreateLoadingCircle";
+import { generateSkillsSection } from "./util/animations/generateSkillsSection";
 
 const myweb = new CreateWebsite(
   [hero(), aboutme(), skills(), gallery(), form()],
@@ -22,4 +24,5 @@ myweb.run();
 handleNavActive();
 
 // animations
-Animations();
+Animations("image-section");
+generateSkillsSection();

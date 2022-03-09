@@ -88,20 +88,42 @@ export class CreateLoadingCircle implements ICreateLoadingCircle {
 
     // let circleNumber = element.querySelector(".circle-number");
     let counter = 0;
-    setInterval(() => {
-      if (counter == this.level) {
-        clearInterval();
-      } else {
-        counter += 1;
-        circleNumber.innerHTML = counter + "%";
-      }
-    }, 1000 * (2 / this.level));
+    circleNumber.innerHTML = counter + "%";
 
     inner.appendChild(circleNumber);
     outer.appendChild(inner);
     element.appendChild(outer);
     const nevSvg = this.createSvg();
-    element.appendChild(nevSvg);
+
+    // const loadingTop: number = element.offsetTop;
+    // const loadingHeight: number = element.clientHeight;
+    // window.addEventListener("scroll", () => {
+    //   if (window.pageYOffset >= loadingTop - loadingHeight / 1.2) {
+    //     setTimeout(() => {
+    //       element.appendChild(nevSvg);
+    //       setInterval(() => {
+    //         if (counter == this.level) {
+    //           clearInterval();
+    //         } else {
+    //           counter += 1;
+    //           circleNumber.innerHTML = counter + "%";
+    //         }
+    //       }, 1000 * (2 / this.level));
+    //     }, this.delay * 1000);
+    //   }
+    // });
+
+    setTimeout(() => {
+      element.appendChild(nevSvg);
+      setInterval(() => {
+        if (counter == this.level) {
+          clearInterval();
+        } else {
+          counter += 1;
+          circleNumber.innerHTML = counter + "%";
+        }
+      }, 1000 * (2 / this.level));
+    }, this.delay * 1000);
 
     return element;
   }

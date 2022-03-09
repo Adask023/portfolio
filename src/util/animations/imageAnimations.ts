@@ -1,19 +1,13 @@
-export const Animations = () => {
-
-    // img
-  const imageAnim: HTMLElement = document.querySelector(".image-section");
+export const Animations = (selector: string) => {
+  // img
+  const imageAnim: HTMLElement = document.querySelector(`.${selector}`);
   const imageTop: number = imageAnim.offsetTop;
   const imageHeight: number = imageAnim.clientHeight;
 
-
-
-  console.log(imageTop + imageHeight);
   window.addEventListener("scroll", () => {
-    console.log(imageHeight);
     if (window.pageYOffset >= imageTop - imageHeight / 1.2) {
       imageAnim.classList.add("show");
     }
   });
 };
 
-// - imageHeight / 3

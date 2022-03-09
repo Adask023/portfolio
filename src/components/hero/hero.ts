@@ -6,8 +6,3 @@ export const hero = () => {
   return element;
 };
 
-// const sectionTop: number = section.offsetTop;
-// const sectionHeight: number = section.clientHeight;
-// if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-//   current = section.getAttribute("id");
-// }
