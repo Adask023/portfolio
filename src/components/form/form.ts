@@ -33,7 +33,6 @@ const handleFormSubmitting = (element: HTMLDivElement) => {
       formSend.innerHTML = "";
     }, 4000);
   };
-console.log('s')
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     formErorrs.innerText = "";
