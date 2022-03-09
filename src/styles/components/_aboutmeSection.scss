@@ -14,11 +14,18 @@ $borderImage: 2px;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     position: relative;
+    opacity: 0;
+    transition: 1s;
 
     &::before {
       @include imageShadowPink;
     }
   }
+
+  .show {
+    opacity: 1;
+  }
+
   .info-section {
   }
 }

@@ -78,6 +78,12 @@
           @include animated-button;
         }
       }
+      .form-errors {
+        color: red;
+      }
+      .form-send {
+        color: green;
+      }
     }
   }
 }
