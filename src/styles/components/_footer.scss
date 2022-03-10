@@ -2,3 +2,47 @@
   background-color: $gray;
   color: white;
 }
+
+.scroll-animation {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  display: block;
+  background-color: transparent;
+  transform: scale(0);
+  animation: enterCir 2s ease forwards;
+  transition: .4s;
+  z-index: 10;
+
+  &.show {
+    display: block;
+    transform: scale(1);
+  }
+  a {
+    position: relative;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: 0.05s;
+      circle {
+        fill: url(#GradientColor);
+        transition: 0.5s;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      font-size: 24px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@keyframes showUpButton {
+  100% {
+    transform: scale(1);
+  }
+}

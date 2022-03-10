@@ -1,0 +1,29 @@
+#parallax-1 {
+  width: 100%;
+  min-height: 40vh;
+  display: block;
+  background-image: url("../images/code-parallax.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $acc-5;
+    z-index: 12;
+  }
+}

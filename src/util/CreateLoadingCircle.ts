@@ -5,13 +5,20 @@ interface ICreateLoadingCircle {
   pickVariant: () => string;
 }
 
+type color = "blue" | "pink" | "yellow" | "darkblue" | "darkpink";
+
 export class CreateLoadingCircle implements ICreateLoadingCircle {
   private level: number;
   private delay: number;
   private variant: string;
   private id: string;
 
-  constructor(level = 50, delay = 0.2, variant = "blue", id: string) {
+  constructor(
+    level: number = 50,
+    delay: number = 0.2,
+    variant: color = "blue",
+    id: string = "0"
+  ) {
     this.level = level;
     this.delay = delay;
     this.variant = variant;
@@ -86,7 +93,6 @@ export class CreateLoadingCircle implements ICreateLoadingCircle {
     const circleNumber = document.createElement("div");
     circleNumber.classList.add("circle-number");
 
-    // let circleNumber = element.querySelector(".circle-number");
     let counter = 0;
     circleNumber.innerHTML = counter + "%";
 
@@ -94,24 +100,6 @@ export class CreateLoadingCircle implements ICreateLoadingCircle {
     outer.appendChild(inner);
     element.appendChild(outer);
     const nevSvg = this.createSvg();
-
-    // const loadingTop: number = element.offsetTop;
-    // const loadingHeight: number = element.clientHeight;
-    // window.addEventListener("scroll", () => {
-    //   if (window.pageYOffset >= loadingTop - loadingHeight / 1.2) {
-    //     setTimeout(() => {
-    //       element.appendChild(nevSvg);
-    //       setInterval(() => {
-    //         if (counter == this.level) {
-    //           clearInterval();
-    //         } else {
-    //           counter += 1;
-    //           circleNumber.innerHTML = counter + "%";
-    //         }
-    //       }, 1000 * (2 / this.level));
-    //     }, this.delay * 1000);
-    //   }
-    // });
 
     setTimeout(() => {
       element.appendChild(nevSvg);
