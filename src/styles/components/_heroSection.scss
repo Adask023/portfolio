@@ -109,26 +109,15 @@
   }
 }
 
-// .hero {
-//   // .bgc-image {
-//   //   min-height: 100vh;
-//   //   width: 100px;
-//   //   background-image: url("../images/nature-background.jpg");
-//   //   background-position: center; /* Center the image */
-//   //   background-repeat: no-repeat; /* Do not repeat the image */
-//   //   background-size: cover; /* Resize the background image to cover the entire container */
-//   // }
-// }
-
 @media screen and (max-width: 600px) {
   .hero-section {
     .hero {
       .bar {
-
         font-size: 14px;
+        h1 {
+          font-size: 14px;
+        }
       }
     }
   }
-
-
 }

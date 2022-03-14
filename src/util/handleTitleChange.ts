@@ -3,7 +3,7 @@ export const titleChange = (): void => {
     document.querySelectorAll(".nav-list li");
 
   const titlePrefix: string = "My page";
-  document.title = titlePrefix;
+  document.title = `${titlePrefix} - Home`;
 
   window.addEventListener("scroll", () => {
     navLi.forEach((link) => {

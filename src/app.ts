@@ -8,7 +8,7 @@ import { form } from "./components/form/form";
 import { footer } from "./components/footer/footer";
 import { handleNavActive } from "./util/handleNavActive";
 import { skills } from "./components/skills/skills";
-import { Animations } from "./util/animations/imageAnimations";
+import { animations } from "./util/animations/imageAnimations";
 import { generateSkillsSection } from "./util/animations/generateSkillsSection";
 import { scrollAnimation } from "./util/animations/scrollAnimation";
 import { parallax1 } from "./components/parallax/parallax-section-1";
@@ -23,14 +23,13 @@ const myweb = new CreateWebsite(
 );
 myweb.run();
 
-titleChange();
-
 // global
+titleChange();
 handleNavActive();
 
 // animations
 typingAnimation();
-Animations("image-section");
+animations("image-section");
 generateSkillsSection();
 scrollAnimation();
 

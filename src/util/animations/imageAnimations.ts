@@ -1,4 +1,4 @@
-export const Animations = (selector: string) => {
+export const animations = (selector: string) => {
   // img
   const imageAnim: HTMLElement = document.querySelector(`.${selector}`);
   const imageTop: number = imageAnim.offsetTop;
