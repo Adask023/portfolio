@@ -24,8 +24,9 @@
       <div class="form-section p-2">
         <form id="form" class="form">
           <div class="p-1">
-            <label for="form-name">Name</label>
+            <label id="form-name-label" for="form-name">Name</label>
             <input
+              aria-labelledby="form-name-label"
               placeholder="Your name..."
               class="p-1"
               type="text"
@@ -34,8 +35,9 @@
             />
           </div>
           <div class="p-1">
-            <label for="form-email">Email</label>
+            <label id="form-email-label" for="form-email">Email</label>
             <input
+              aria-labelledby="form-email-label"
               placeholder="Your email..."
               class="p-1"
               type="text"
@@ -44,8 +46,9 @@
             />
           </div>
           <div class="p-1">
-            <label for="form-message">Message</label>
+            <label id="form-message-label" for="form-message">Message</label>
             <textarea
+              aria-labelledby="form-message-label"
               id="form-message"
               class="p-1"
               placeholder="Your message..."

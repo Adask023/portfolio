@@ -13,23 +13,17 @@ export class Parallax implements IParallax {
 
   run() {
     const parallax: HTMLElement = document.querySelector(`${this.selector}`);
-    console.log(parallax);
     const sectionTop = parallax.offsetTop;
     const sectionHeight = parallax.offsetHeight;
-
-    console.log(sectionTop);
-    console.log(window.pageYOffset);
-
-    // const s = this.strength;
+    
     const s = this.strength;
 
     window.addEventListener("scroll", () => {
       if (window.innerWidth > 1000) {
         let offset: number = window.pageYOffset - (sectionTop + sectionHeight);
         parallax.style.backgroundPositionY = offset * s + "px";
-        console.log(offset);
       } else {
-        parallax.style.backgroundPositionY = 0 + "px"
+        parallax.style.backgroundPositionY = 0 + "px";
       }
     });
   }

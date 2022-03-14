@@ -1,8 +1,8 @@
-export const titleChange = () => {
+export const titleChange = (): void => {
   const navLi: NodeListOf<HTMLElement> =
     document.querySelectorAll(".nav-list li");
 
-  const titlePrefix = "My page";
+  const titlePrefix: string = "My page";
   document.title = titlePrefix;
 
   window.addEventListener("scroll", () => {
@@ -12,7 +12,6 @@ export const titleChange = () => {
         document.title != `${titlePrefix} - ${link.textContent}`
       ) {
         document.title = `${titlePrefix} - ${link.textContent}`;
-        console.log("yeee");
       }
     });
   });

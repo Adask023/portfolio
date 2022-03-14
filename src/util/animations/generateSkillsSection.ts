@@ -1,7 +1,6 @@
 import { CreateLoadingCircle } from "../CreateLoadingCircle";
 
 export const generateSkillsSection = () => {
-  // const skills = element.querySelector(".skills");
   const circleItem1: HTMLElement = document.querySelector(".circle-1");
   const circleItem2: HTMLElement = document.querySelector(".circle-2");
   const circleItem3: HTMLElement = document.querySelector(".circle-3");
@@ -11,10 +10,7 @@ export const generateSkillsSection = () => {
 
   const skillsSection: HTMLElement = document.querySelector("#skills");
   const sectionTop: number = skillsSection.offsetTop;
-  const sectionHeight: number = skillsSection.clientHeight;
   let render = false;
-
-  console.log(sectionHeight);
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset >= sectionTop - 500 && !render) {
