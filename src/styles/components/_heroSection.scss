@@ -23,9 +23,53 @@
         background-color: $lightgray;
         line-height: 60px;
 
+        .text-animate {
+          position: relative;
+
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+
+          $type-speed: 2s;
+
+          &:before {
+            background: $gray;
+            animation: typewriter $type-speed steps(13) 1s forwards;
+          }
+
+          &:after {
+            width: 0.125em;
+            background-color: white;
+            animation: typewriter $type-speed steps(13) 1s forwards,
+              blink 700ms steps(13) infinite;
+          }
+        }
+        @keyframes typewriter {
+          to {
+            left: 100%;
+          }
+        }
+
+        @keyframes blink {
+          to {
+            background: transparent;
+          }
+        }
+
         .bar-content {
           max-width: 1000px;
           margin: auto;
+
+          h1.name {
+            font-weight: normal;
+            display: inline-block;
+          }
         }
       }
       .bar:nth-child(even) {
@@ -75,3 +119,16 @@
 //   //   background-size: cover; /* Resize the background image to cover the entire container */
 //   // }
 // }
+
+@media screen and (max-width: 600px) {
+  .hero-section {
+    .hero {
+      .bar {
+
+        font-size: 14px;
+      }
+    }
+  }
+
+
+}

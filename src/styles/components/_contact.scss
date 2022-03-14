@@ -14,7 +14,7 @@
     color: white;
 
     .info {
-      p.profile-links {
+      .social-button {
         text-align: center;
       }
       a {
@@ -51,11 +51,12 @@
     }
 
     .form-section {
-      width: 100%;
       color: black;
 
       form > div {
-        width: calc(100% - 20px);
+        label {
+          color: white;
+        }
 
         input {
           width: calc(100% - 10px);
@@ -90,6 +91,9 @@
 
 @media screen and (max-width: 900px) {
   .contact-section {
+    .contact-wrapper {
+      padding: 40px 0px 0px 0px;
+    }
     .form-wrapper {
       grid-template-columns: 1fr;
     }

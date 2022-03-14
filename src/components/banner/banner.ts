@@ -1,4 +1,4 @@
-import { loadTemplate } from "../../util/LoadTemplate";
+import { loadTemplate } from "../../util/loadTemplate";
 
 export const banner = () => {
   const htmlString = require("./banner-static.html");

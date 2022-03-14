@@ -25,7 +25,13 @@ $borderImage: 2px;
   .show {
     opacity: 1;
   }
+}
 
-  .info-section {
+@media screen and(max-width: 800px) {
+  .aboutme-section {
+    .image-section {
+      height: 300px;
+    
+    }
   }
 }

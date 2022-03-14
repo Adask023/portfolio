@@ -1,4 +1,4 @@
-import { loadTemplate } from "../../util/LoadTemplate";
+import { loadTemplate } from "../../util/loadTemplate";
 
 const handleFormSubmitting = (element: HTMLDivElement) => {
   interface Isend {

@@ -13,6 +13,8 @@ import { generateSkillsSection } from "./util/animations/generateSkillsSection";
 import { scrollAnimation } from "./util/animations/scrollAnimation";
 import { parallax1 } from "./components/parallax/parallax-section-1";
 import { Parallax } from "./util/animations/parallax";
+import { typingAnimation } from "./util/animations/typingAnimation";
+import { titleChange } from "./util/handleTitleChange";
 
 const myweb = new CreateWebsite(
   [hero(), aboutme(), skills(), parallax1(), gallery(), form()],
@@ -21,10 +23,13 @@ const myweb = new CreateWebsite(
 );
 myweb.run();
 
+titleChange();
+
 // global
 handleNavActive();
 
 // animations
+typingAnimation();
 Animations("image-section");
 generateSkillsSection();
 scrollAnimation();
